@@ -316,5 +316,3 @@ app.delete('/orders/:id', asyncHandler(async (req, res) => {
 }));
 
 app.listen(process.env.PORT || 3000, () => console.log('Server Started'));
-
-console.log("모 르 겟 어")
