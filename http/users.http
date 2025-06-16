@@ -1,0 +1,84 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "yjkim@example.com", 
+  "firstName": "원영",
+  "lastName": "장",
+  "address": "충청북도 청주시 북문로 210번길 5"
+}
+
+###
+
+PATCH http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
+Content-Type: application/json
+
+{
+  "address": "서울특별시 강남구 무실로 234번길 45-6"
+}
+
+###
+
+DELETE http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
+
+// b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e: 삭제하려는 데이터의 아이디(id)
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "wonyoung@codeit.com", 
+  "firstName": "원영",
+  "lastName": "장",
+  "address": "서울특별시 용산구 이촌동",
+  "userPreference": {
+    "receiveEmail": false
+  }
+}
+
+###
+
+PATCH http://localhost:3000/users/ID 변경 필요
+Content-Type: application/json
+
+{
+  "email": "ive_wonyoung@codeit.com",
+  "userPreference": {
+    "receiveEmail": true
+  }
+}
+
+###
+
+GET http://localhost:3000/orders
+
+###
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "userId": "70e1e61d-f2ae-4d7d-bf8f-d65eafdb6a45",
+  "orderItems": [
+	  {
+	    "id": '1e112c02-7c92-4d52-b76e-485e41e3f64d',
+	    "unitPrice": 59000,
+	    "quantity": 1
+	  },
+	  {
+	    "id": 'f753a259-1e26-4ed9-9e60-099a4a06af4f',
+	    "unitPrice": 79000,
+	    "quantity": 2
+	  }
+  ]
+}
